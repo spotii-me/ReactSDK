@@ -21,6 +21,7 @@ public class MySDKActivity extends AppCompatActivity implements DefaultHardwareB
         mReactRootView = new ReactRootView(this);
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
+                .setCurrentActivity(this)
                 .setBundleAssetName("index.android.bundle")
                 .addPackage(new MainReactPackage())
                 .addPackage(new MyReactPackage())
